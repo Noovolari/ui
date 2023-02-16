@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-ui',
   template: `
-    <p>
+    <button>
       ui works!
-    </p>
+    </button>
   `,
   styles: [
   ]
