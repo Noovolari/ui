@@ -1,17 +1,20 @@
 {
-  "name": "ui",
-  "version": "0.0.1",
+  "name": "@noovolari/ui",
+  "version": "0.1.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && cp package.json ./dist && cp README.md ./dist",
+    "publish": "cd ./dist && npm publish",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
-    "build-storybook": "npm run docs:json && build-storybook"
+    "build-storybook": "npm run docs:json && build-storybook -o docs-build -s ./projects/ui/src/lib/assets"
   },
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@angular/animations": "^14.2.0",
     "@angular/common": "^14.2.0",

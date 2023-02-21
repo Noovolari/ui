@@ -2,7 +2,7 @@ import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import type { Story, Meta } from '@storybook/angular';
 
-import Button from '../component/button.component';
+import { ButtonComponent } from '../component/button.component';
 import Header from './header.component';
 
 export default {
@@ -10,7 +10,7 @@ export default {
   component: Header,
   decorators: [
     moduleMetadata({
-      declarations: [Button],
+      declarations: [ButtonComponent],
       imports: [CommonModule],
     }),
   ],

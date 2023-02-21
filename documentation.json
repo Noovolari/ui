@@ -14,29 +14,7 @@
             "methods": []
         }
     ],
-    "injectables": [
-        {
-            "name": "UiService",
-            "id": "injectable-UiService-cea688e3a6c073b7612d4e232828b99c30de1b15646836834772c2827b64ca8ca5ac1543369a2e1ac0babb8ac201b7d81c5c682cd3d66683d6d129a7558507e4",
-            "file": "projects/ui/src/lib/ui.service.ts",
-            "properties": [],
-            "methods": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "description": "",
-            "rawdescription": "\n",
-            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UiService {\n\n  constructor() { }\n}\n",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 6
-            },
-            "type": "injectable"
-        }
-    ],
+    "injectables": [],
     "guards": [],
     "interceptors": [],
     "classes": [],
@@ -44,7 +22,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-4ef205c97a334c309aa4001c8ab4a6d9571dcae18d0e85aaf0d367467ab5d3a9f13ab3573726f1fcb409bc9b49894dadfb80b1bbe1b6ba7041455ad9d4922004",
+            "id": "component-ButtonComponent-8d0b26788a1c8bdf115db2f145c09d3b3bbac643722b3b9286c5bc61abb4505d9cc612c6774d33f3ec3bd8bb6d5e3ca1374e117840820e68f0244390aa2f404c",
             "file": "projects/ui/src/lib/component/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -77,15 +55,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 711,
-                            "end": 724,
+                            "pos": 703,
+                            "end": 716,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 712,
-                                "end": 720,
+                                "pos": 704,
+                                "end": 712,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -145,7 +123,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -318,71 +296,18 @@
                 }
             ],
             "stylesData": ""
-        },
-        {
-            "name": "UiComponent",
-            "id": "component-UiComponent-c9320a0ae99fbbd28bc5e40680367c7d89ecff1ebae17b088c996b1c58acc57ee4edd9b12e5ed7165ea720418eb7958c31daa897339f5cf573cca25e59c1a833",
-            "file": "projects/ui/src/lib/ui.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "lib-ui",
-            "styleUrls": [],
-            "styles": [],
-            "template": "<button>\n  ui works!\n</button>\n",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 17,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-ui',\n  template: `\n    <button>\n      ui works!\n    </button>\n  `,\n  styles: [\n  ]\n})\nexport class UiComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 13
-            },
-            "implements": [
-                "OnInit"
-            ]
         }
     ],
     "modules": [
         {
             "name": "UiModule",
-            "id": "module-UiModule-0f72cf76f5f89b3935b40c926fb3ae89213e7fb1d9faaa7d33f0bd825e4e92cf67c245ef1213cf4ea995b01248dcf54fb4ada612bea066181c7ac30d091b5663",
+            "id": "module-UiModule-5e51bbab862e1565ae8ed890d61577773e30e81267ac9c27946f32d074a5a3774e186593a62228115a76f6e9e5fdcfa780f96fe5c49656cc3c517c26df548e15",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "projects/ui/src/lib/ui.module.ts",
+            "file": "projects/ui/src/lib/ui/ui.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { UiComponent } from './ui.component';\n\n\n\n@NgModule({\n  declarations: [\n    UiComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    UiComponent\n  ]\n})\nexport class UiModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"../component/button.component\";\n\n@NgModule({\n  declarations: [ButtonComponent],\n  imports: [\n    CommonModule\n  ],\n  exports: [ButtonComponent]\n})\nexport class UiModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -392,7 +317,7 @@
                     "type": "declarations",
                     "elements": [
                         {
-                            "name": "UiComponent"
+                            "name": "ButtonComponent"
                         }
                     ]
                 },
@@ -404,7 +329,7 @@
                     "type": "exports",
                     "elements": [
                         {
-                            "name": "UiComponent"
+                            "name": "ButtonComponent"
                         }
                     ]
                 },
@@ -527,8 +452,8 @@
                 "file": "projects/ui/src/lib/component/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -624,8 +549,8 @@
                     "file": "projects/ui/src/lib/component/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                    "type": "Story<ButtonComponent>",
+                    "defaultValue": "(args: ButtonComponent) => ({\n  props: args,\n})"
                 }
             ],
             "projects/ui/src/lib/composite/Header.stories.ts": [
@@ -846,24 +771,6 @@
                 "name": "PageComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ui/src/lib/ui.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "UiComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ui/src/lib/ui.service.ts",
-                "type": "injectable",
-                "linktype": "injectable",
-                "name": "UiService",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
                 "status": "low"
             },
             {
