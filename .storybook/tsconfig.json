@@ -13,8 +13,7 @@
   ],
   "include": [
     "../src/**/*",
-    "../projects/**/*",
-    "../stories/**/*"
+    "../projects/**/*"
   ],
   "files": [
     "./typings.d.ts"
