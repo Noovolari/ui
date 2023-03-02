@@ -2,7 +2,7 @@ import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import type { Story, Meta } from '@storybook/angular';
 
-import { ButtonComponent } from '../component/button.component';
+import { ButtonComponent } from '../component/button/button.component';
 import Header from './header.component';
 
 export default {

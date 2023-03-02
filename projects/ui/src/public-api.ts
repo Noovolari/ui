@@ -3,4 +3,4 @@
  */
 
 export * from "./lib/ui/ui.module";
-export * from "./lib/component/button.component";
+export * from "./lib/ui/component/button/button.component";
