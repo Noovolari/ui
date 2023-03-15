@@ -18,7 +18,6 @@ const Template: Story<NoovolariButtonComponent> = (args: NoovolariButtonComponen
 });
 
 export const DefaultSize = Template.bind({});
-// More on args: https://storybook.js.org/docs/angular/writing-stories/args
 DefaultSize.args = {
   fullSize: false,
   primary: true,
@@ -26,7 +25,6 @@ DefaultSize.args = {
 };
 
 export const FullSize = Template.bind({});
-// More on args: https://storybook.js.org/docs/angular/writing-stories/args
 FullSize.args = {
   fullSize: true,
   primary: true,
@@ -34,7 +32,6 @@ FullSize.args = {
 };
 
 export const Secondary = Template.bind({});
-// More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Secondary.args = {
   fullSize: false,
   primary: false,
