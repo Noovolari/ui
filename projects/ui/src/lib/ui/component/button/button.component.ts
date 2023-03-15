@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'noovolari-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.css'],
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
   /**

@@ -24,7 +24,12 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@storybook/preset-scss": "^1.0.3",
+    "css-loader": "^5.2.6",
     "rxjs": "~7.5.0",
+    "sass": "^1.59.3",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
