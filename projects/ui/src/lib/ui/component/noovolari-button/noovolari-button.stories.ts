@@ -21,19 +21,22 @@ export const DefaultSize = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 DefaultSize.args = {
   fullSize: false,
-  primary: true
+  primary: true,
+  label: 'Click me!'
 };
 
 export const FullSize = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 FullSize.args = {
   fullSize: true,
-  primary: true
+  primary: true,
+  label: 'Click me!'
 };
 
 export const Secondary = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Secondary.args = {
   fullSize: false,
-  primary: false
+  primary: false,
+  label: 'Click me!'
 };

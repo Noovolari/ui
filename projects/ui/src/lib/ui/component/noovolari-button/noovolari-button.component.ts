@@ -13,8 +13,19 @@ export class NoovolariButtonComponent implements OnInit {
   @Input()
   fullSize = false;
 
+  /**
+   * Is this the principal call to action on the page?
+   */
   @Input()
   primary = false;
+
+  /**
+   * Button contents
+   *
+   * @required
+   */
+  @Input()
+  label = 'Click me!';
 
   constructor() { }
 

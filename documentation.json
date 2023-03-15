@@ -22,7 +22,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-f1a60127b510abdc41f2cd971ca141aadb320d48e6ebcba166cbd850d4a018ecb7152f158bdba0942d5aaddf7b69337932cc46e49d7ccbcdb2e6772730ebdf65",
+            "id": "component-ButtonComponent-f764fbf753988184ccf59f60db34986396269686d4eef7c205ec68edde6dd0953d208ae3f0a64e8ebf8bae98c45d419e8354146b96f8077492244ea930c5d4ae",
             "file": "projects/ui/src/lib/ui/component/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -31,7 +31,7 @@
             "providers": [],
             "selector": "noovolari-button",
             "styleUrls": [
-                "./button.component.css"
+                "./button.component.scss"
             ],
             "styles": [],
             "templateUrl": [
@@ -56,15 +56,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 566,
-                            "end": 579,
+                            "pos": 567,
+                            "end": 580,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 567,
-                                "end": 575,
+                                "pos": 568,
+                                "end": 576,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -124,12 +124,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'noovolari-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.css'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'noovolari-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
                     "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
-                    "styleUrl": "./button.component.css"
+                    "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
@@ -294,6 +294,100 @@
             "templateData": "<input class=\"noovolari-input\" placeholder=\"{{placeholder}}\">\n"
         },
         {
+            "name": "NoovolariButtonComponent",
+            "id": "component-NoovolariButtonComponent-14e2a8c953924c848e29bea9fa1dab7481fa29052a3da0ba7f4890ec897ad398ef5060f2fa0d9a75d44d659607b7ca1649f41f9fdeb24887b50edeabdf9aa0a9",
+            "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lib-noovolari-button",
+            "styleUrls": [
+                "./noovolari-button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./noovolari-button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "fullSize",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDoes the button fill all the relative parent space\n",
+                    "description": "<p>Does the button fill all the relative parent space</p>\n",
+                    "line": 14,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, Input, OnInit} from '@angular/core';\n\n@Component({\n  selector: 'lib-noovolari-button',\n  templateUrl: './noovolari-button.component.html',\n  styleUrls: ['./noovolari-button.component.scss']\n})\nexport class NoovolariButtonComponent implements OnInit {\n\n  /**\n   * Does the button fill all the relative parent space\n   */\n  @Input()\n  fullSize = false;\n\n  @Input()\n  primary = false;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  public get classes(): string[] {\n    return [\n      ...this.fullSize ? [\"full-size\"] : [],\n      ...this.primary ? [] : [\"secondary\"]\n    ];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "$primary-color: #454082;\n$secondary-color: #FFFFFF;\n\nbutton {\n  background-color: $primary-color;\n  color: $secondary-color;\n  border: none;\n  padding: 8px;\n  border-radius: 6px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\nbutton.full-size {\n  width: 100%;\n}\n\nbutton.secondary {\n  background-color: $secondary-color;\n  color: $primary-color;\n  border: 1px solid $primary-color;\n}\n\nbutton:hover {\n  background-color: rgba(69, 64, 130, 0.9);\n  transition: ease 200ms;\n}\n",
+                    "styleUrl": "./noovolari-button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 17
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 24
+                    }
+                }
+            },
+            "templateData": "<button [ngClass]=\"classes\">\n  Click me!\n</button>\n"
+        },
+        {
             "name": "PageComponent",
             "id": "component-PageComponent-be0a3f3a6b4c6f48e9782c7a9a795396bec684d13596f30cb72054eccf18aced8939fd5322ee593c64cbf5374bd43f401ecf60ea9887fc5413387e0390dc85ce",
             "file": "projects/ui/src/lib/ui/page/page.component.ts",
@@ -377,13 +471,13 @@
     "modules": [
         {
             "name": "UiModule",
-            "id": "module-UiModule-dcca2deb140753d67e03856e640c5a26e1ed3478a609c30e84baa9859ddb7a5ea5170edc37e98741073a7e2ac8d01640a9df366f5f9e9318c06387b4b705bf48",
+            "id": "module-UiModule-7ea2eb4c802b07ee4d96afd3c3f16eb020efcf496edd01ac19027179acb776482a20437d4888000b8114dfdb427113ca919b5317ea3d5ad344059f8add1af5db",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ui/src/lib/ui/ui.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"./component/button/button.component\";\nimport { InputFieldComponent } from './component/input-field/input-field.component';\n\n@NgModule({\n  declarations: [ButtonComponent, InputFieldComponent],\n  imports: [\n    CommonModule\n  ],\n  exports: [ButtonComponent]\n})\nexport class UiModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"./component/button/button.component\";\nimport { InputFieldComponent } from './component/input-field/input-field.component';\nimport { NoovolariButtonComponent } from './component/noovolari-button/noovolari-button.component';\n\n@NgModule({\n  declarations: [ButtonComponent, InputFieldComponent, NoovolariButtonComponent],\n  imports: [\n    CommonModule\n  ],\n  exports: [ButtonComponent]\n})\nexport class UiModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -397,6 +491,9 @@
                         },
                         {
                             "name": "InputFieldComponent"
+                        },
+                        {
+                            "name": "NoovolariButtonComponent"
                         }
                     ]
                 },
@@ -434,6 +531,26 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "DefaultSize",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FullSize",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Large",
@@ -525,6 +642,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -573,6 +700,16 @@
                 "deprecationMessage": "",
                 "type": "Story<InputFieldComponent>",
                 "defaultValue": "(args: InputFieldComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NoovolariButtonComponent>",
+                "defaultValue": "(args: NoovolariButtonComponent) => ({\n  props: args,\n})"
             }
         ],
         "functions": [],
@@ -598,6 +735,48 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
+                }
+            ],
+            "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts": [
+                {
+                    "name": "DefaultSize",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "FullSize",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NoovolariButtonComponent>",
+                    "defaultValue": "(args: NoovolariButtonComponent) => ({\n  props: args,\n})"
                 }
             ],
             "projects/ui/src/lib/ui/component/button/Button.stories.ts": [
@@ -837,6 +1016,55 @@
             },
             {
                 "filePath": "projects/ui/src/lib/ui/component/input-field/input-field.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NoovolariButtonComponent",
+                "coveragePercent": 20,
+                "coverageCount": "1/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DefaultSize",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FullSize",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
