@@ -19,6 +19,13 @@ button.secondary {
   border: 1px solid g.$primary-color;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    font-size: 40px;
+  }
+}
+
+
 button:hover {
   background-color: rgba(69, 64, 130, 0.9);
   transition: ease 200ms;

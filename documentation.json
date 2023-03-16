@@ -391,7 +391,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use \"../../assets/scss/global\" as g;\nbutton {\n  background-color: g.$primary-color;\n  color: g.$secondary-color;\n  border: none;\n  padding: 8px;\n  border-radius: 6px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\nbutton.full-size {\n  width: 100%\n}\n\nbutton.secondary {\n  background-color: g.$secondary-color;\n  color: g.$primary-color;\n  border: 1px solid g.$primary-color;\n}\n\nbutton:hover {\n  background-color: rgba(69, 64, 130, 0.9);\n  transition: ease 200ms;\n}\n",
+                    "data": "@use \"../../assets/scss/global\" as g;\nbutton {\n  background-color: g.$primary-color;\n  color: g.$secondary-color;\n  border: none;\n  padding: 8px;\n  border-radius: 6px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\nbutton.full-size {\n  width: 100%\n}\n\nbutton.secondary {\n  background-color: g.$secondary-color;\n  color: g.$primary-color;\n  border: 1px solid g.$primary-color;\n}\n\n@media (prefers-color-scheme: light) {\n  button {\n    font-size: 40px;\n  }\n}\n\nbutton:hover {\n  background-color: rgba(69, 64, 130, 0.9);\n  transition: ease 200ms;\n}\n",
                     "styleUrl": "./noovolari-button.component.scss"
                 }
             ],
