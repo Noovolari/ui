@@ -1,0 +1,28 @@
+@import "../../assets/scss/global";
+
+$enabled-background-color: #F3F3F3;
+
+.noovolari-filter-container {
+  border: solid 1px $border-color;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  span {
+    @include no-highlight;
+  }
+  span:not(:nth-child(1)) {
+    margin-left: 5px;
+  }
+  span.hidden {
+    display: none;
+  }
+}
+.enabled {
+  background-color: $enabled-background-color;
+  @include transitionable;
+}
+:not(.enabled) {
+  @include transitionable;
+}

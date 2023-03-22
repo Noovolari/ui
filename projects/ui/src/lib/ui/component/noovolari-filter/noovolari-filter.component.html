@@ -1,0 +1,5 @@
+<div [ngClass]="classes" (click)="toggle()">
+  <span><i class="ph ph-house"></i></span>
+  <span>{{ label }}</span>
+  <span class="{{ removable ? 'hidden' : '' }}"><i class="ph ph-x"></i></span>
+</div>

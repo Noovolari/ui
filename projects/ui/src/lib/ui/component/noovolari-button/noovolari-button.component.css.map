@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,MAAO;EACL,gBAAgB,EAJF,OAAO;EAKrB,KAAK,EAJW,OAAO;EAKvB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,GAAG;EACZ,aAAa,EAAE,GAAG;EAClB,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,OAAO;;AAGjB,gBAAiB;EACf,KAAK,EAAE,IAAI;;AAGb,gBAAiB;EACf,gBAAgB,EAjBA,OAAO;EAkBvB,KAAK,EAnBS,OAAO;EAoBrB,MAAM,EAAE,iBAAwB;;AAGlC,YAAa;EACX,gBAAgB,EAAE,sBAAsB;EACxC,UAAU,EAAE,UAAU",
-"sources": ["noovolari-button.component.scss"],
-"names": [],
-"file": "noovolari-button.component.css"
-}
