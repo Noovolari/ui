@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'lib-noovolari-button',
@@ -26,6 +26,11 @@ export class NoovolariButtonComponent implements OnInit {
    */
   @Input()
   label = 'Click me!';
+
+  /**
+   * Button click event
+   */
+  @Output() onClick = new EventEmitter<Event>();
 
   constructor() { }
 

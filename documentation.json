@@ -295,7 +295,7 @@
         },
         {
             "name": "NoovolariButtonComponent",
-            "id": "component-NoovolariButtonComponent-9a626fa5df53d562bd8e0cad7bea0b5ba6d615b9b5a8c29c63f45a8f668145d00bae201db4729b794fc87fe95a3facd1691b7e6574a0ffe991678be6c21e28b9",
+            "id": "component-NoovolariButtonComponent-34cc419c77ce357a52dc44e5c986718cc87d690f56cc9aa305c53ea2a790beb45353dd030df346cab273f18d66ca93264ea95e3e7a97ecf398f429776a6a2b6c",
             "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -330,15 +330,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 506,
-                            "end": 519,
+                            "pos": 528,
+                            "end": 541,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 507,
-                                "end": 515,
+                                "pos": 529,
+                                "end": 537,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -366,7 +366,18 @@
                     "decorators": []
                 }
             ],
-            "outputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nButton click event\n",
+                    "description": "<p>Button click event</p>\n",
+                    "line": 33,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [],
             "methodsClass": [
                 {
@@ -375,7 +386,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 32,
+                    "line": 37,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -387,11 +398,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, Input, OnInit} from '@angular/core';\n\n@Component({\n  selector: 'lib-noovolari-button',\n  templateUrl: './noovolari-button.component.html',\n  styleUrls: ['./noovolari-button.component.scss']\n})\nexport class NoovolariButtonComponent implements OnInit {\n\n  /**\n   * Does the button fill all the relative parent space\n   */\n  @Input()\n  fullSize = false;\n\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Click me!';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  public get classes(): string[] {\n    return [\n      ...this.fullSize ? [\"full-size\"] : [],\n      ...this.primary ? [] : [\"secondary\"]\n    ];\n  }\n}\n",
+            "sourceCode": "import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';\n\n@Component({\n  selector: 'lib-noovolari-button',\n  templateUrl: './noovolari-button.component.html',\n  styleUrls: ['./noovolari-button.component.scss']\n})\nexport class NoovolariButtonComponent implements OnInit {\n\n  /**\n   * Does the button fill all the relative parent space\n   */\n  @Input()\n  fullSize = false;\n\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Click me!';\n\n  /**\n   * Button click event\n   */\n  @Output() onClick = new EventEmitter<Event>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  public get classes(): string[] {\n    return [\n      ...this.fullSize ? [\"full-size\"] : [],\n      ...this.primary ? [] : [\"secondary\"]\n    ];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use \"../../assets/scss/global\" as g;\nbutton {\n  background-color: g.$primary-color;\n  color: g.$secondary-color;\n  border: none;\n  padding: 8px;\n  border-radius: 6px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\nbutton.full-size {\n  width: 100%\n}\n\nbutton.secondary {\n  background-color: g.$secondary-color;\n  color: g.$primary-color;\n  border: 1px solid g.$primary-color;\n}\n\n@media (prefers-color-scheme: light) {\n  button {\n    font-size: 40px;\n  }\n}\n\nbutton:hover {\n  background-color: rgba(69, 64, 130, 0.9);\n  transition: ease 200ms;\n}\n",
+                    "data": "@use \"../../assets/scss/global\" as g;\nbutton {\n  background-color: g.$primary-color;\n  color: g.$secondary-color;\n  border: none;\n  padding: 8px;\n  border-radius: 6px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\nbutton.full-size {\n  width: 100%\n}\n\nbutton.secondary {\n  background-color: g.$secondary-color;\n  color: g.$primary-color;\n  border: 1px solid g.$primary-color;\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    font-size: 40px;\n  }\n}\n\nbutton:hover {\n  opacity: 0.9;\n  transition: ease 200ms;\n}\n",
                     "styleUrl": "./noovolari-button.component.scss"
                 }
             ],
@@ -402,7 +413,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 28
+                "line": 33
             },
             "implements": [
                 "OnInit"
@@ -414,7 +425,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 35
+                        "line": 40
                     }
                 }
             },
@@ -555,6 +566,16 @@
     ],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "actionsData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  onClick: action(\"onClick\")\n}"
+            },
             {
                 "name": "context",
                 "ctype": "miscellaneous",
@@ -742,35 +763,24 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<NoovolariButtonComponent>",
-                "defaultValue": "(args: NoovolariButtonComponent) => ({\n  props: args,\n})"
+                "defaultValue": "(args: NoovolariButtonComponent) => ({\n  props: {\n    ...args,\n    onClick: actionsData.onClick\n  },\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "projects/ui/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ui/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ui/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "literal type"
-                }
-            ],
             "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts": [
+                {
+                    "name": "actionsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  onClick: action(\"onClick\")\n}"
+                },
                 {
                     "name": "DefaultSize",
                     "ctype": "miscellaneous",
@@ -809,7 +819,28 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<NoovolariButtonComponent>",
-                    "defaultValue": "(args: NoovolariButtonComponent) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: NoovolariButtonComponent) => ({\n  props: {\n    ...args,\n    onClick: actionsData.onClick\n  },\n})"
+                }
+            ],
+            "projects/ui/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
                 }
             ],
             "projects/ui/src/lib/ui/component/button/Button.stories.ts": [
@@ -1062,9 +1093,19 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "NoovolariButtonComponent",
-                "coveragePercent": 50,
-                "coverageCount": "3/6",
-                "status": "medium"
+                "coveragePercent": 57,
+                "coverageCount": "4/7",
+                "status": "good"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "actionsData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             },
             {
                 "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",

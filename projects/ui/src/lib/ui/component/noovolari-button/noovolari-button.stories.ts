@@ -1,6 +1,7 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { NoovolariButtonComponent } from './noovolari-button.component';
+import { action } from "@storybook/addon-actions";
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -10,11 +11,19 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  excludeStories: /.*Data$/,
 } as Meta;
+
+export const actionsData = {
+  onClick: action("onClick")
+}
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
 const Template: Story<NoovolariButtonComponent> = (args: NoovolariButtonComponent) => ({
-  props: args,
+  props: {
+    ...args,
+    onClick: actionsData.onClick
+  },
 });
 
 export const DefaultSize = Template.bind({});
