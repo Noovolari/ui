@@ -1,10 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
+* {
+  font-family: 'SF Pro Display', sans-serif;
+}
+
 /*! Light theme. */
 $primary-color: #454082;
 $secondary-color: #FFFFFF;
-
-* {
-  font-family: 'SF Pro Display', sans-serif;;
-}
-
