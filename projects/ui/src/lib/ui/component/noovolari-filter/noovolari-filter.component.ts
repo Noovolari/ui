@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-noovolari-filter',
+  selector: 'noovolari-filter',
   templateUrl: './noovolari-filter.component.html',
   styleUrls: ['./noovolari-filter.component.css']
 })

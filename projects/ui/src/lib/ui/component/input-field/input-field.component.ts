@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-input-field',
+  selector: 'input-field',
   templateUrl: './input-field.component.html',
   styleUrls: ['./input-field.component.css']
 })

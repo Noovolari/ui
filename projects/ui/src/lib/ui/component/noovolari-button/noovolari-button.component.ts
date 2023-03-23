@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'lib-noovolari-button',
+  selector: 'noovolari-button',
   templateUrl: './noovolari-button.component.html',
   styleUrls: ['./noovolari-button.component.scss']
 })
