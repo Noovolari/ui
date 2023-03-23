@@ -42,6 +42,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-
+/**/.sass-cache
 /**/*.css
 /**/*.css.map
