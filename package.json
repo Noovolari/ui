@@ -12,6 +12,11 @@
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook -o docs-build -s projects/ui/src/lib/ui/assets"
   },
+  "exports": {
+    ".": {
+      "sass": "./projects/ui/src/lib/ui/assets/scss/_global.scss"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
