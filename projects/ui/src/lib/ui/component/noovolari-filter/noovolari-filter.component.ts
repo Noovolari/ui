@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'noovolari-filter',
   templateUrl: './noovolari-filter.component.html',
-  styleUrls: ['./noovolari-filter.component.css']
+  styleUrls: ['./noovolari-filter.component.scss']
 })
 export class NoovolariFilterComponent implements OnInit {
 
