@@ -22,14 +22,14 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-f764fbf753988184ccf59f60db34986396269686d4eef7c205ec68edde6dd0953d208ae3f0a64e8ebf8bae98c45d419e8354146b96f8077492244ea930c5d4ae",
+            "id": "component-ButtonComponent-521989befad90deb0568be9a9b486401abeb336a33279677da5b1a719f8103c2e3af4d391bb4c2f3f11d11967b6f097fee4c21a455c3acb28cf0b550940e3196",
             "file": "projects/ui/src/lib/ui/component/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "noovolari-button",
+            "selector": "storybook-button",
             "styleUrls": [
                 "./button.component.scss"
             ],
@@ -124,7 +124,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'noovolari-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -220,89 +220,15 @@
             "stylesData": ""
         },
         {
-            "name": "InputFieldComponent",
-            "id": "component-InputFieldComponent-86e323308b58f5b6f8989d9ac0159480ee8b84ea84b06f297f43cbe6bcb18b6ba22d7ca790b2b77815ca2c5df43546b8ee9efc83e84edfba4220dda1c5496c16",
-            "file": "projects/ui/src/lib/ui/component/input-field/input-field.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "lib-input-field",
-            "styleUrls": [
-                "./input-field.component.css"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./input-field.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "placeholder",
-                    "defaultValue": "\"Placeholder\"",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nA placeholder to show when the input value is empty\n",
-                    "description": "<p>A placeholder to show when the input value is empty</p>\n",
-                    "line": 19,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 12,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-input-field',\n  templateUrl: './input-field.component.html',\n  styleUrls: ['./input-field.component.css']\n})\nexport class InputFieldComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  /**\n   * A placeholder to show when the input value is empty\n   */\n  @Input()\n  placeholder = \"Placeholder\";\n\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".noovolari-input {\n  padding: 8px 12px;\n  height: 22px;\n  background: #FFFFFF;\n  color: #171717;\n  border: 1px solid #999999;\n  border-radius: 8px;\n}\n",
-                    "styleUrl": "./input-field.component.css"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<input class=\"noovolari-input\" placeholder=\"{{placeholder}}\">\n"
-        },
-        {
             "name": "NoovolariButtonComponent",
-            "id": "component-NoovolariButtonComponent-34cc419c77ce357a52dc44e5c986718cc87d690f56cc9aa305c53ea2a790beb45353dd030df346cab273f18d66ca93264ea95e3e7a97ecf398f429776a6a2b6c",
+            "id": "component-NoovolariButtonComponent-dda98dcb67aeedbbba91a5e1262be25020bf2bfb969144b9f6acec9a83ca09425516465ea38308286b27dfb507b409904d30d032b549593ebef8d202d584740c",
             "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "lib-noovolari-button",
+            "selector": "noovolari-button",
             "styleUrls": [
                 "./noovolari-button.component.scss"
             ],
@@ -330,15 +256,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 528,
-                            "end": 541,
+                            "pos": 524,
+                            "end": 537,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 529,
-                                "end": 537,
+                                "pos": 525,
+                                "end": 533,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -398,11 +324,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';\n\n@Component({\n  selector: 'lib-noovolari-button',\n  templateUrl: './noovolari-button.component.html',\n  styleUrls: ['./noovolari-button.component.scss']\n})\nexport class NoovolariButtonComponent implements OnInit {\n\n  /**\n   * Does the button fill all the relative parent space\n   */\n  @Input()\n  fullSize = false;\n\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Click me!';\n\n  /**\n   * Button click event\n   */\n  @Output() onClick = new EventEmitter<Event>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  public get classes(): string[] {\n    return [\n      ...this.fullSize ? [\"full-size\"] : [],\n      ...this.primary ? [] : [\"secondary\"]\n    ];\n  }\n}\n",
+            "sourceCode": "import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';\n\n@Component({\n  selector: 'noovolari-button',\n  templateUrl: './noovolari-button.component.html',\n  styleUrls: ['./noovolari-button.component.scss']\n})\nexport class NoovolariButtonComponent implements OnInit {\n\n  /**\n   * Does the button fill all the relative parent space\n   */\n  @Input()\n  fullSize = false;\n\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Click me!';\n\n  /**\n   * Button click event\n   */\n  @Output() onClick = new EventEmitter<Event>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  public get classes(): string[] {\n    return [\n      ...this.fullSize ? [\"full-size\"] : [],\n      ...this.primary ? [] : [\"secondary\"]\n    ];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use \"../../assets/scss/global\" as g;\nbutton {\n  background-color: g.$primary-color;\n  color: g.$secondary-color;\n  border: none;\n  padding: 8px;\n  border-radius: 6px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\nbutton.full-size {\n  width: 100%\n}\n\nbutton.secondary {\n  background-color: g.$secondary-color;\n  color: g.$primary-color;\n  border: 1px solid g.$primary-color;\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    font-size: 40px;\n  }\n}\n\nbutton:hover {\n  opacity: 0.9;\n  transition: ease 200ms;\n}\n",
+                    "data": "@import \"../../assets/scss/global\";\n\nbutton {\n  background-color: $primary-color;\n  color: $secondary-color;\n  border: none;\n  padding: 8px;\n  border-radius: 6px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\nbutton.full-size {\n  width: 100%\n}\n\nbutton.secondary {\n  background-color: $secondary-color;\n  color: $primary-color;\n  border: 1px solid $primary-color;\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    font-size: 40px;\n  }\n}\n\nbutton:hover {\n  opacity: 0.9;\n  @include transitionable;\n}\n",
                     "styleUrl": "./noovolari-button.component.scss"
                 }
             ],
@@ -430,6 +356,119 @@
                 }
             },
             "templateData": "<button [ngClass]=\"classes\">\n  {{ label }}\n</button>\n"
+        },
+        {
+            "name": "NoovolariFilterComponent",
+            "id": "component-NoovolariFilterComponent-f5c1a921bf95e1ab22a5a039bfb475e2e0eb805dff497774ddbb054e316f20d7018e8ccc044b53c56f07ef396709a76eae4408f50dfa7244e3fd268e6a256fb8",
+            "file": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "noovolari-filter",
+            "styleUrls": [
+                "./noovolari-filter.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./noovolari-filter.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "\"label\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "removable",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "enabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "toggle",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'noovolari-filter',\n  templateUrl: './noovolari-filter.component.html',\n  styleUrls: ['./noovolari-filter.component.scss']\n})\nexport class NoovolariFilterComponent implements OnInit {\n\n  @Input()\n  label = \"label\";\n\n  @Input()\n  removable = false;\n\n  enabled = false;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  public get classes(): string[] {\n    return [\n      \"noovolari-filter-container\",\n      ...this.enabled ? [\"enabled\"] : []\n    ];\n  }\n\n  toggle(): void {\n    this.enabled = !this.enabled;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../../assets/scss/global\";\n\n$enabled-background-color: #F3F3F3;\n\n.noovolari-filter-container {\n  border: solid 1px $border-color;\n  border-radius: 8px;\n  display: inline-block;\n  text-align: center;\n  padding: 8px;\n  cursor: pointer;\n  span {\n    @include no-highlight;\n  }\n  span:not(:nth-child(1)) {\n    margin-left: 5px;\n  }\n  span.hidden {\n    display: none;\n  }\n}\n.enabled {\n  background-color: $enabled-background-color;\n  @include transitionable;\n}\n:not(.enabled) {\n  @include transitionable;\n}\n",
+                    "styleUrl": "./noovolari-filter.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 16
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 23
+                    }
+                }
+            },
+            "templateData": "<div [ngClass]=\"classes\" (click)=\"toggle()\">\n  <span><i class=\"ph ph-house\"></i></span>\n  <span>{{ label }}</span>\n  <span class=\"{{ removable ? 'hidden' : '' }}\"><i class=\"ph ph-x\"></i></span>\n</div>\n"
         },
         {
             "name": "PageComponent",
@@ -515,13 +554,13 @@
     "modules": [
         {
             "name": "UiModule",
-            "id": "module-UiModule-7ea2eb4c802b07ee4d96afd3c3f16eb020efcf496edd01ac19027179acb776482a20437d4888000b8114dfdb427113ca919b5317ea3d5ad344059f8add1af5db",
+            "id": "module-UiModule-58ee7de7acb4efefc4496a873a576e1e15d5975e808d40afa6dbb6af93151687fab83b1f8521ba673a48624f9b639a08fa44a998356ee59f4d74e8181b14b767",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ui/src/lib/ui/ui.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"./component/button/button.component\";\nimport { InputFieldComponent } from './component/input-field/input-field.component';\nimport { NoovolariButtonComponent } from './component/noovolari-button/noovolari-button.component';\n\n@NgModule({\n  declarations: [ButtonComponent, InputFieldComponent, NoovolariButtonComponent],\n  imports: [\n    CommonModule\n  ],\n  exports: [ButtonComponent]\n})\nexport class UiModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"./component/button/button.component\";\nimport { NoovolariButtonComponent } from './component/noovolari-button/noovolari-button.component';\nimport { NoovolariFilterComponent } from './component/noovolari-filter/noovolari-filter.component';\n\n\n@NgModule({\n  declarations: [ButtonComponent, NoovolariButtonComponent, NoovolariFilterComponent],\n  imports: [\n    CommonModule\n  ],\n  exports: [ButtonComponent, NoovolariButtonComponent, NoovolariFilterComponent]\n})\nexport class UiModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -534,10 +573,10 @@
                             "name": "ButtonComponent"
                         },
                         {
-                            "name": "InputFieldComponent"
+                            "name": "NoovolariButtonComponent"
                         },
                         {
-                            "name": "NoovolariButtonComponent"
+                            "name": "NoovolariFilterComponent"
                         }
                     ]
                 },
@@ -550,6 +589,12 @@
                     "elements": [
                         {
                             "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "NoovolariButtonComponent"
+                        },
+                        {
+                            "name": "NoovolariFilterComponent"
                         }
                     ]
                 },
@@ -570,6 +615,16 @@
                 "name": "actionsData",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  onClick: action(\"onClick\")\n}"
+            },
+            {
+                "name": "actionsData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -585,6 +640,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "DefaultSize",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "DefaultSize",
@@ -667,16 +732,6 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/ui/src/lib/ui/component/input-field/input-field.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -749,11 +804,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/ui/src/lib/ui/component/input-field/input-field.stories.ts",
+                "file": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<InputFieldComponent>",
-                "defaultValue": "(args: InputFieldComponent) => ({\n  props: args,\n})"
+                "type": "Story<NoovolariFilterComponent>",
+                "defaultValue": "(args: NoovolariFilterComponent) => ({\n  props: {\n    ...args,\n  },\n})"
             },
             {
                 "name": "Template",
@@ -770,6 +825,38 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts": [
+                {
+                    "name": "actionsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  onClick: action(\"onClick\")\n}"
+                },
+                {
+                    "name": "DefaultSize",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NoovolariFilterComponent>",
+                    "defaultValue": "(args: NoovolariFilterComponent) => ({\n  props: {\n    ...args,\n  },\n})"
+                }
+            ],
             "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts": [
                 {
                     "name": "actionsData",
@@ -958,28 +1045,6 @@
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\n  props: args,\n})"
                 }
-            ],
-            "projects/ui/src/lib/ui/component/input-field/input-field.stories.ts": [
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ui/src/lib/ui/component/input-field/input-field.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ui/src/lib/ui/component/input-field/input-field.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<InputFieldComponent>",
-                    "defaultValue": "(args: InputFieldComponent) => ({\n  props: args,\n})"
-                }
             ]
         },
         "groupedFunctions": {},
@@ -988,7 +1053,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 6,
+        "count": 5,
         "status": "low",
         "files": [
             {
@@ -1060,35 +1125,6 @@
                 "status": "very-good"
             },
             {
-                "filePath": "projects/ui/src/lib/ui/component/input-field/input-field.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "InputFieldComponent",
-                "coveragePercent": 25,
-                "coverageCount": "1/4",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ui/src/lib/ui/component/input-field/input-field.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ui/src/lib/ui/component/input-field/input-field.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1139,6 +1175,45 @@
             },
             {
                 "filePath": "projects/ui/src/lib/ui/component/noovolari-button/noovolari-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NoovolariFilterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "actionsData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DefaultSize",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/lib/ui/component/noovolari-filter/noovolari-filter.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
