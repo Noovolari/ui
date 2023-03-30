@@ -7,11 +7,23 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NoovolariFilterComponent implements OnInit {
 
+  /**
+   * Text written in the filter
+   */
   @Input()
   label = "label";
 
+  /**
+   * Chose an icon at https://phosphoricons.com/
+   */
   @Input()
-  removable = false;
+  iconId = "house";
+
+  /**
+   * The filter can be removed clicking on a button
+   */
+  @Input()
+  removable = true;
 
   enabled = false;
 

@@ -11,6 +11,7 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+package.lock
 
 # IDEs and editors
 .idea/
@@ -37,6 +38,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+documentation.json
 
 # System files
 .DS_Store

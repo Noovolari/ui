@@ -3,19 +3,19 @@
 $enabled-background-color: #F3F3F3;
 
 .noovolari-filter-container {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
   border: solid 1px $border-color;
+  background-color: $secondary-color;
   border-radius: 8px;
-  display: inline-block;
   text-align: center;
   padding: 8px;
   cursor: pointer;
-  span {
+  * {
     @include no-highlight;
   }
-  span:not(:nth-child(1)) {
-    margin-left: 5px;
-  }
-  span.hidden {
+  *.hidden {
     display: none;
   }
 }
