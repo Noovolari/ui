@@ -39,6 +39,7 @@ package.lock
 testem.log
 /typings
 documentation.json
+docs
 
 # System files
 .DS_Store
