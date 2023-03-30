@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'noovolari-filter',
-  templateUrl: './noovolari-filter.component.html',
-  styleUrls: ['./noovolari-filter.component.scss']
+  selector: 'noovolari-chip',
+  templateUrl: './noovolari-chip.component.html',
+  styleUrls: ['./noovolari-chip.component.scss']
 })
-export class NoovolariFilterComponent implements OnInit {
+export class NoovolariChipComponent implements OnInit {
 
   /**
    * Text written in the filter
@@ -34,7 +34,7 @@ export class NoovolariFilterComponent implements OnInit {
 
   public get classes(): string[] {
     return [
-      "noovolari-filter-container",
+      "noovolari-chip-container",
       ...this.enabled ? ["enabled"] : []
     ];
   }
