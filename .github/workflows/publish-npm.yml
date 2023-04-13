@@ -9,9 +9,7 @@ on:
 
 jobs:
   release:
-    needs: check_for_release
     runs-on: ubuntu-latest
-    if: needs.check_for_release.outputs.to-release == 1
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
