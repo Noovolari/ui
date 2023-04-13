@@ -1,11 +1,20 @@
 {
-  "name": "ui",
-  "version": "0.0.1",
+  "name": "@noovolari/ui",
+  "version": "0.1.15",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0"
+    "@angular/core": "^14.2.0",
+    "@angular/material": "14.2.7"
   },
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "exports": {
+    ".": {
+      "sass": "./projects/ui/src/lib/ui/assets/scss/_global.scss"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
