@@ -1,0 +1,31 @@
+name: Leapp Core CI/CD
+
+on:
+  push:
+    branches:
+      - 'master'
+
+  workflow_dispatch:
+
+jobs:
+  release:
+    needs: check_for_release
+    runs-on: ubuntu-latest
+    if: needs.check_for_release.outputs.to-release == 1
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Bootstrap
+        run: |
+          npm install
+      - name: Build
+        run: |
+          npm run build
+      - name: Release npm
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+          npm run publish-on-npm
