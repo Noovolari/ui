@@ -119,6 +119,35 @@ import StackAlt from './assets/stackalt.svg';
 Storybook helps you build UI components in isolation from your app's business logic, data, and context.
 That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
 
+## Import an external module to UI component
+
+To correctly import an external module to an UI component we should add the module to `ui.module.ts` and`component.stories.ts`.
+
+Example:
+```
+// ui.module.ts
+@NgModule({
+  declarations: [...],
+  imports: [ExternalModule],
+  exports: [...]
+})
+```
+```
+// component.stories.ts
+export default {
+  title: 'Path/Component',
+  component: ComponentName,
+  argTypes: {},
+  decorators: [
+    moduleMetadata({
+      declarations: [...],
+      imports: [..., ExternalModule],
+    }),
+  ],
+  excludeStories: /.*Data$/,
+} as Meta;
+```
+
 Browse example stories now by navigating to them in the sidebar.
 View their code in the `stories` directory to learn how they work.
 We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
