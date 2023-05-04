@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from "@angular/material/menu";
 
 @Component({
   selector: 'lib-noovolari-filter',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./noovolari-filter.component.scss']
 })
 export class NoovolariFilterComponent implements OnInit {
+  @ViewChild(MatMenuTrigger)
+  trigger?: MatMenuTrigger;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onApplyClick() {
+    this.trigger?.closeMenu();
+  }
+
+  onCancelClick() {
+    this.trigger?.closeMenu();
+  }
 }

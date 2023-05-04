@@ -3,8 +3,9 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { NoovolariFilterComponent } from "./noovolari-filter.component";
 import { moduleMetadata } from "@storybook/angular";
 import { CommonModule } from "@angular/common";
+import { MatMenuModule } from "@angular/material/menu";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoovolariChipComponent } from "../../component/noovolari-chip/noovolari-chip.component";
-import { MatMenu } from "@angular/material/menu";
 import { NoovolariButtonComponent } from "../../component/noovolari-button/noovolari-button.component";
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
@@ -15,8 +16,8 @@ export default {
   argTypes: {},
   decorators: [
     moduleMetadata({
-      declarations: [NoovolariChipComponent, MatMenu, NoovolariButtonComponent],
-      imports: [CommonModule],
+      declarations: [NoovolariChipComponent, NoovolariButtonComponent],
+      imports: [CommonModule, MatMenuModule, BrowserAnimationsModule],
     }),
   ],
   excludeStories: /.*Data$/,

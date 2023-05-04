@@ -6,13 +6,14 @@ core.mjs:5479 NG0303: Can't bind to 'matMenuTriggerFor' since it isn't a known p
 
 <noovolari-chip label="Pippo Franco" [matMenuTriggerFor]="menu"></noovolari-chip>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <span>Redial</span>
-  </button>
-  <button mat-menu-item disabled>
-    <span>Check voice mail</span>
-  </button>
-  <button mat-menu-item>
-    <span>Disable alerts</span>
-  </button>
+  <ng-template matMenuContent>
+    <div class="menu-container" (click)="$event.preventDefault(); $event.stopPropagation();">
+      <div class="header">HEADER</div>
+      <div class="body">BODY</div>
+      <div class="actions">
+        <noovolari-button primary="true" label="Apply" (click)="onApplyClick()"></noovolari-button>
+        <noovolari-button label="Cancel" (click)="onCancelClick()"></noovolari-button>
+      </div>
+    </div>
+  </ng-template>
 </mat-menu>
