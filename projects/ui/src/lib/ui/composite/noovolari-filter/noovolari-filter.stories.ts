@@ -4,6 +4,8 @@ import { NoovolariFilterComponent } from "./noovolari-filter.component";
 import { moduleMetadata } from "@storybook/angular";
 import { CommonModule } from "@angular/common";
 import { MatMenuModule } from "@angular/material/menu";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoovolariChipComponent } from "../../component/noovolari-chip/noovolari-chip.component";
 import { NoovolariButtonComponent } from "../../component/noovolari-button/noovolari-button.component";
@@ -17,7 +19,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [NoovolariChipComponent, NoovolariButtonComponent],
-      imports: [CommonModule, MatMenuModule, BrowserAnimationsModule],
+      imports: [CommonModule, MatMenuModule, MatCheckboxModule, FormsModule, BrowserAnimationsModule],
     }),
   ],
   excludeStories: /.*Data$/,

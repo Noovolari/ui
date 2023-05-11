@@ -9,6 +9,7 @@ import { MatMenuTrigger } from "@angular/material/menu";
 export class NoovolariFilterComponent implements OnInit {
   @ViewChild(MatMenuTrigger)
   trigger?: MatMenuTrigger;
+  checked: boolean = false;
 
   constructor() { }
 
