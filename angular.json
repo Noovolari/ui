@@ -15,9 +15,12 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "project": "projects/ui/ng-package.json"
+            "styles": [
+              "src/styles.css",
+              "src/styles.scss"
+            ]
           },
           "configurations": {
             "production": {
