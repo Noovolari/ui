@@ -1,22 +1,19 @@
-<!--
-core.mjs:5479 NG0303: Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'noovolari-chip' (used in the 'NoovolariFilterComponent' component template).
-1. If 'noovolari-chip' is an Angular component and it has the 'matMenuTriggerFor' input, then verify that it is a part of an @NgModule where this component is declared.
-2. If 'noovolari-chip' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
-3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.-->
-<mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+<div class="card flex justify-content-center">
+  <p-button label="Check" icon="pi pi-check"></p-button>
+</div>
 
-<noovolari-chip label="Pippo Franco" [matMenuTriggerFor]="menu"></noovolari-chip>
-<mat-menu #menu="matMenu">
-  <ng-template matMenuContent>
-    <div class="menu-container" (click)="$event.preventDefault(); $event.stopPropagation();">
-      <div class="header">HEADER</div>
-      <div class="body">
+<noovolari-chip label="Pippo Franco"></noovolari-chip>
 
-      </div>
-      <div class="actions">
-        <noovolari-button [primary]="true" label="Apply" (click)="onApplyClick()"></noovolari-button>
-        <noovolari-button label="Cancel" (click)="onCancelClick()"></noovolari-button>
-      </div>
+<ng-template>
+  <div class="menu-container" (click)="$event.preventDefault(); $event.stopPropagation();">
+    <div class="header">HEADER</div>
+    <div class="body">
+
     </div>
-  </ng-template>
-</mat-menu>
+    <div class="actions">
+      <noovolari-button [primary]="true" label="Apply" (click)="onApplyClick()"></noovolari-button>
+      <noovolari-button label="Cancel" (click)="onCancelClick()"></noovolari-button>
+    </div>
+  </div>
+</ng-template>
+

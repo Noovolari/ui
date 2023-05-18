@@ -8,11 +8,11 @@
 /docs-build
 
 # Node
-/node_modules
+**/node_modules
 npm-debug.log
 yarn-error.log
 package.lock
-/**/package.lock
+**/package.lock
 
 # IDEs and editors
 .idea/
