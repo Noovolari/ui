@@ -1,11 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'storybook-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
+  imports: [CommonModule],
+  template: ` <button
+    type="button"
+    (click)="onClick.emit($event)"
+    [ngClass]="classes"
+    [ngStyle]="{ 'background-color': backgroundColor }"
+  >
+    {{ label }}
+  </button>`,
+  styleUrls: ['./button.css'],
 })
-export class ButtonComponent {
+export default class ButtonComponent {
   /**
    * Is this the principal call to action on the page?
    */

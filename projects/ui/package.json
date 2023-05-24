@@ -1,22 +1,12 @@
 {
-  "name": "@noovolari/ui",
-  "version": "0.2.1",
+  "name": "ui",
+  "version": "0.0.1",
   "peerDependencies": {
-    "@angular/animations": "^14.2.0",
-    "@angular/cdk": "^14.2.7",
-    "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0",
-    "@angular/material": "14.2.7"
+    "@angular/common": "^15.1.0",
+    "@angular/core": "^15.1.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "exports": {
-    ".": {
-      "sass": "./projects/ui/src/lib/ui/assets/scss/_global.scss"
-    }
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+  "sideEffects": false
 }
