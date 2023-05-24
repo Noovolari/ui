@@ -1,0 +1,28 @@
+@import "../../assets/scss/global";
+
+$enabled-background-color: #F3F3F3;
+
+.noovolari-chip-container {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  border: solid 1px $border-color;
+  background-color: $secondary-color;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  * {
+    @include no-highlight;
+  }
+  *.hidden {
+    display: none;
+  }
+}
+.enabled {
+  background-color: $enabled-background-color;
+  @include transitionable;
+}
+:not(.enabled) {
+  @include transitionable;
+}

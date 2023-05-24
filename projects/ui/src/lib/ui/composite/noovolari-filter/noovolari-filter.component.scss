@@ -1,0 +1,28 @@
+.menu-container {
+  background-color: #FFFFFF;
+  margin: -8px 0 -8px 0;
+  padding: 8px 0 8px 0;
+
+  div {
+    padding: 16px 16px;
+  }
+
+  div:not(:last-child) {
+    border-bottom: 1px solid #F3F3F3;
+  }
+
+  .header {
+
+  }
+
+  .body {
+
+  }
+
+  .actions {
+    noovolari-button:first-child {
+      margin-right: 16px;
+    }
+
+  }
+}

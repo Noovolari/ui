@@ -1,0 +1,23 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url('https://unpkg.com/phosphor-icons@1.4.2/src/css/icons.css');
+
+* {
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+/*! Light theme. */
+$primary-color: #454082;
+$secondary-color: #FFFFFF;
+$border-color: #DADADA;
+
+@mixin no-highlight {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin transitionable {
+  transition: ease 200ms;
+}
