@@ -1,13 +1,10 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/angular/types-6-0';
 import { NoovolariFilterComponent } from "./noovolari-filter.component";
-import { moduleMetadata } from "@storybook/angular";
+import { Meta, moduleMetadata, StoryObj } from "@storybook/angular";
 import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoovolariChipComponent } from "../../component/noovolari-chip/noovolari-chip.component";
 import { NoovolariButtonComponent } from "../../component/noovolari-button/noovolari-button.component";
-// import { ButtonModule } from 'primeng/button';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -18,18 +15,15 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [NoovolariChipComponent, NoovolariButtonComponent],
-      imports: [CommonModule, FormsModule, BrowserAnimationsModule],
+      imports: [CommonModule, BrowserAnimationsModule],
     }),
   ],
   excludeStories: /.*Data$/,
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
-const Template: Story<NoovolariFilterComponent> = (args: NoovolariFilterComponent) => ({
-  props: {
-    ...args,
-  },
-});
+type Story = StoryObj<NoovolariFilterComponent>;
 
-export const DefaultSize = Template.bind({});
-DefaultSize.args = {};
+export const DefaultSize: Story = {
+  args: {}
+};

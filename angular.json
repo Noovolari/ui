@@ -5,22 +5,14 @@
   "projects": {
     "ui": {
       "projectType": "library",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
       "root": "projects/ui",
       "sourceRoot": "projects/ui/src",
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "styles": [
-              "src/styles.css",
-              "src/styles.scss"
-            ]
+            "project": "projects/ui/ng-package.json"
           },
           "configurations": {
             "production": {
@@ -35,22 +27,41 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ui/src/test.ts",
             "tsConfig": "projects/ui/tsconfig.spec.json",
-            "karmaConfig": "projects/ui/karma.conf.js"
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         },
         "storybook": {
           "builder": "@storybook/angular:start-storybook",
           "options": {
-            "browserTarget": "angular-cli:build",
+            "configDir": "projects/ui/.storybook",
+            "browserTarget": "ui:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ui"
+            ],
             "port": 6006
           }
         },
         "build-storybook": {
           "builder": "@storybook/angular:build-storybook",
           "options": {
-            "browserTarget": "angular-cli:build"
+            "configDir": "projects/ui/.storybook",
+            "browserTarget": "ui:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ui"
+            ],
+            "outputDir": "docs-build"
           }
         }
       }

@@ -1,48 +1,39 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/angular/types-6-0';
 import { NoovolariButtonComponent } from './noovolari-button.component';
-import { action } from "@storybook/addon-actions";
+import { Meta, StoryObj } from "@storybook/angular";
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
   title: 'Component/NoovolariButton',
   component: NoovolariButtonComponent,
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
   excludeStories: /.*Data$/,
 } as Meta;
 
-export const actionsData = {
-  onClick: action("onClick")
-}
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
-const Template: Story<NoovolariButtonComponent> = (args: NoovolariButtonComponent) => ({
-  props: {
-    ...args,
-    onClick: actionsData.onClick
-  },
-});
+type Story = StoryObj<NoovolariButtonComponent>;
 
-export const DefaultSize = Template.bind({});
-DefaultSize.args = {
-  fullSize: false,
-  primary: true,
-  label: 'Click me!'
+export const DefaultSize: Story = {
+  args: {
+    fullSize: false,
+    primary: true,
+    label: 'Click me!',
+  }
 };
 
-export const FullSize = Template.bind({});
-FullSize.args = {
-  fullSize: true,
-  primary: true,
-  label: 'Click me!'
+export const FullSize: Story = {
+  args: {
+    fullSize: true,
+    primary: true,
+    label: 'Click me!'
+  }
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  fullSize: false,
-  primary: false,
-  label: 'Click me!'
+export const Secondary: Story = {
+  args: {
+    fullSize: false,
+    primary: false,
+    label: 'Click me!'
+  }
 };

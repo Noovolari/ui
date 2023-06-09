@@ -43,4 +43,8 @@ export class NoovolariButtonComponent implements OnInit {
       ...this.primary ? [] : ["secondary"]
     ];
   }
+
+  click(event: any): void {
+    this.onClick.next(event);
+  }
 }
