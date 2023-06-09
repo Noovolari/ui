@@ -17,7 +17,7 @@ export class NoovolariButtonComponent implements OnInit {
    * Is this the principal call to action on the page?
    */
   @Input()
-  primary = false;
+  primary = true;
 
   /**
    * Is this action not reversible?
