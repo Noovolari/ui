@@ -37,6 +37,10 @@
         "storybook": {
           "builder": "@storybook/angular:start-storybook",
           "options": {
+            "styles": [
+              "./node_modules/primeng/resources/primeng.css",
+              "./node_modules/primeng/resources/themes/lara-light-blue/theme.css"
+            ],
             "configDir": "projects/ui/.storybook",
             "browserTarget": "ui:build",
             "compodoc": true,
