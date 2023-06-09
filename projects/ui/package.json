@@ -2,13 +2,13 @@
   "name": "@noovolari/ui",
   "version": "0.1.15",
   "peerDependencies": {
-    "@angular/animations": "^15.2.1",
-    "@angular/cdk": "^15.2.9",
-    "@angular/common": "^15.2.1",
-    "@angular/core": "^15.2.1"
+    "@angular/animations": "^14.1.0",
+    "@angular/cdk": "^14.1.0",
+    "@angular/common": "^14.1.0",
+    "@angular/core": "^14.1.0"
   },
   "dependencies": {
-    "primeng": "^15.4.3-lts",
+    "primeng": "^14.2.8-lts",
     "tslib": "^2.3.0"
   },
   "exports": {
