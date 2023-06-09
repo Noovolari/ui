@@ -7,7 +7,10 @@
 
 /*! Light theme. */
 $primary-color: #454082;
-$secondary-color: #FFFFFF;
+$secondary-color: #666666;
+$disabled-background: #E5E5E5;
+$disabled-color: #B0B0B0;
+$critical-color: #E55E51;
 $border-color: #DADADA;
 
 @mixin no-highlight {

@@ -20,6 +20,18 @@ export class NoovolariButtonComponent implements OnInit {
   primary = false;
 
   /**
+   * Is this action not reversible?
+   */
+  @Input()
+  critical = false;
+
+  /**
+   * Is this action disabled?
+   */
+  @Input()
+  disabled = false;
+
+  /**
    * Button contents
    *
    * @required
@@ -40,11 +52,15 @@ export class NoovolariButtonComponent implements OnInit {
   public get classes(): string[] {
     return [
       ...this.fullSize ? ["full-size"] : [],
-      ...this.primary ? [] : ["secondary"]
+      ...this.primary ? [] : ["secondary"],
+      ...this.critical ? ["critical"] : [],
+      ...this.disabled ? ["disabled"] : [],
     ];
   }
 
   click(event: any): void {
-    this.onClick.next(event);
+    if (!this.disabled) {
+      this.onClick.next(event);
+    }
   }
 }
