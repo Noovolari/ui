@@ -37,3 +37,29 @@ export const Secondary: Story = {
     label: 'Click me!'
   }
 };
+
+export const Disabled: Story = {
+  args: {
+    fullSize: false,
+    disabled: true,
+    label: 'Click me!'
+  }
+};
+
+export const Critical: Story = {
+  args: {
+    fullSize: false,
+    primary: true,
+    critical: true,
+    label: 'Click me!'
+  }
+};
+
+export const CriticalSecondary: Story = {
+  args: {
+    fullSize: false,
+    primary: false,
+    critical: true,
+    label: 'Click me!'
+  }
+};

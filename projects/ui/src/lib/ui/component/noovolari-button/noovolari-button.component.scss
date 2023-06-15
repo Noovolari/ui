@@ -2,7 +2,7 @@
 
 button {
   background-color: $primary-color;
-  color: $secondary-color;
+  color: #FFFFFF;
   border: none;
   padding: 8px;
   border-radius: 6px;
@@ -15,18 +15,40 @@ button.full-size {
 }
 
 button.secondary {
-  background-color: $secondary-color;
-  color: $primary-color;
-  border: 1px solid $primary-color;
+  background-color: transparent;
+  color: $secondary-color;
+}
+
+button.disabled {
+  background-color: $disabled-background;
+  color: $disabled-color;
+  border: 1px solid $disabled-background;
+  cursor: initial;
+}
+
+button.critical {
+  background-color: $critical-color;
+  color: #FFFFFF;
+  border: 1px solid $critical-color;
+}
+
+button.secondary.critical {
+  background-color: transparent;
+  color: $critical-color;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+  @include transitionable;
+}
+
+button.disabled:hover {
+  opacity: 1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     font-size: 40px;
   }
-}
-
-button:hover {
-  opacity: 0.9;
-  @include transitionable;
 }
