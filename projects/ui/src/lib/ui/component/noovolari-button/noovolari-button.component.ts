@@ -32,18 +32,6 @@ export class NoovolariButtonComponent implements OnInit {
   disabled = false;
 
   /**
-   * Is this action not reversible?
-   */
-  @Input()
-  critical = false;
-
-  /**
-   * Is this action disabled?
-   */
-  @Input()
-  disabled = false;
-
-  /**
    * Button contents
    *
    * @required
