@@ -1,6 +1,7 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { ButtonComponent } from './button.component';
-import { Meta, StoryObj } from "@storybook/angular";
+import { Meta, moduleMetadata, StoryObj } from "@storybook/angular";
+import { ButtonModule } from "primeng/button";
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -10,6 +11,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [
+    moduleMetadata({
+      imports: [ButtonModule],
+    }),
+  ],
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
@@ -18,27 +24,6 @@ type Story = StoryObj<ButtonComponent>;
 
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
-  }
-};
-
-export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  }
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  }
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
     label: 'Button',
   }
 };
