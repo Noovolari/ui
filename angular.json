@@ -39,7 +39,9 @@
           "options": {
             "styles": [
               "./node_modules/primeng/resources/primeng.css",
-              "./node_modules/primeng/resources/themes/lara-light-blue/theme.css"
+              "./node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "./node_modules/primeflex/primeflex.css",
+              "./node_modules/primeicons/primeicons.css"
             ],
             "configDir": "projects/ui/.storybook",
             "browserTarget": "ui:build",
